@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## 5.12.0
+##
+#proc ModulesHelp { } {
+#        puts stderr "\t5.12.0\n"
+#        puts stderr "\n\tVersion 5.12.0\n"
+#
+#}
+
+module-whatis   "libsbml"
+module-whatis   "Version: 5.12.0"
+module-whatis   "Category: Parser"
+module-whatis   "Description: ??"
+module-whatis   "URL: http://sbml.org/Software/libSBML"
+
+# load only one version of qt at a time
+conflict libsbml
+
+#prereq qt/4.8.4
+
+prepend-path    LD_LIBRARY_PATH /opt/libsbml/5.12.0/lib
+prepend-path    LIBRARY_PATH /opt/libsbml/5.12.0
+prepend-path    CPLUS_INCLUDE_PATH /opt/libsbml/5.12.0/include
+prepend-path    INCLUDE /opt/libsbml/5.12.0/include

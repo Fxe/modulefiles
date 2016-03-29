@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## 11.3.1
+##
+#proc ModulesHelp { } {
+#        puts stderr "\t11.3.1\n"
+#        puts stderr "\n\tVersion 11.3.1\n"
+#
+#}
+
+module-whatis   "MKL"
+module-whatis   "Version: 11.3.1"
+module-whatis   "Category: Math"
+module-whatis   "Description: ??"
+module-whatis   "URL: http://www.intel.com"
+
+# load only one version of qt at a time
+conflict mkl
+
+#prereq qt/4.8.4
+
+prepend-path    LD_LIBRARY_PATH /opt/intel/mkl/lib/intel64
+prepend-path    INCLUDE /opt/intel/mkl/include

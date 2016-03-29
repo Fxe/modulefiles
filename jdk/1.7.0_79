@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## Java SE Development Kit 1.7.0_79
+##
+#proc ModulesHelp { } {
+#        puts stderr "\tJava SE Development Kit 1.7.0_79\n"
+#        puts stderr "\n\tVersion 1.7.0_79\n"
+#
+#}
+
+module-whatis   "JDK"
+module-whatis   "Version: 1.7.0_79"
+module-whatis   "Category: Compiler"
+module-whatis   "Description: Java Compiler"
+module-whatis   "URL: http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+
+# load only one version of qt at a time
+conflict jdk
+
+#prereq qt/4.8.4
+
+#prepend-path    LD_LIBRARY_PATH ???
+#prepend-path    INCLUDE ???
+prepend-path    PATH /opt/jdk/1.7.0_79/bin
+
+setenv JAVA_HOME /opt/jdk/1.7.0_79
